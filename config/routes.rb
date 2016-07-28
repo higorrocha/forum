@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :posts do
+  	resources :comments
+  end
   devise_for :models
-  resources :posts
 
   root 'posts#index'
 end
