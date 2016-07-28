@@ -1,6 +1,4 @@
 class Post < ActiveRecord::Base
-
-	def index
-	end
-
+	belongs_to :user
+	has_many :comments
 end
